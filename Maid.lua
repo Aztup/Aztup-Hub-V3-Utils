@@ -116,3 +116,5 @@ end
 --- Alias for DoCleaning()
 -- @function Destroy
 Maid.Destroy = Maid.DoCleaning
+
+return Maid;
