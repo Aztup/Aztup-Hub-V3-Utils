@@ -21,7 +21,7 @@ end
 
 --- Returns Maid[key] if not part of Maid metatable
 -- @return Maid[key] value
-function Maid:__index(index)
+function Maid.__index(self, index)
 	if Maid[index] then
 		return Maid[index]
 	else
