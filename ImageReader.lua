@@ -39,14 +39,14 @@ local function getImageSize(imageData)
 
     buffer:read(-4);
 
-	if (buffer:read(4) == "GIF8") then
+    if (buffer:read(4) == "GIF8") then
         buffer:read(2);
 
         local width = buffer:read(1):byte()+buffer:read(1):byte()*256;
         local height = buffer:read(1):byte()+buffer:read(1):byte()*256;
 
-		return {width = width, height = height};
-	end;
+        return {width = width, height = height};
+    end;
 end;
 
 return getImageSize;
