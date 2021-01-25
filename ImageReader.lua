@@ -1,4 +1,5 @@
-local Buffer = {}
+local Buffer = {};
+
 Buffer.ClassName = 'Buffer';
 Buffer.__index = Buffer;
 
