@@ -34,7 +34,7 @@ local function getImageSize(imageData)
         local width = read(buffer:read(4));
         local height = read(buffer:read(4));
 
-        return {width = width, height = height};
+        return Vector2.new(width, height);
     end;
 
     buffer:read(-4);
@@ -45,7 +45,7 @@ local function getImageSize(imageData)
         local width = buffer:read(1):byte()+buffer:read(1):byte()*256;
         local height = buffer:read(1):byte()+buffer:read(1):byte()*256;
 
-        return {width = width, height = height};
+        return Vector2.new(width, height);
     end;
 end;
 
