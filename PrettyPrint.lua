@@ -48,7 +48,7 @@ local function format_value(v)
     elseif typ == 'string' then
         return '"'..v..'"'
     elseif typ == 'Instance' then
-        return v:GetFullName()
+        return v.GetFullName(v)
     else
         return typ..'.new(' .. tostring(v) .. ')'
     end
